@@ -8,7 +8,7 @@ def home():
 
 @app.route('/xd')
 def xd():
-	return 'xDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD'
+	return render_template('xd.html')
 
 if __name__ == '__main__':
 	app.run()
