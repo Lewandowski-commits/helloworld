@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -6,9 +6,12 @@ app = Flask(__name__)
 def home():
 	return render_template('index.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-	return 'Login'
+	from forms import LoginForm
+	#form = LoginForm(request.form)
+	
+	return render_template('login.html')
 
 @app.route('/xd')
 def xd():
