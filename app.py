@@ -8,6 +8,7 @@ def home():
 
 @app.route('/login')
 def login():
+	return 'Login'
 
 @app.route('/xd')
 def xd():
