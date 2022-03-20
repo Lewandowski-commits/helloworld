@@ -1,10 +1,13 @@
 from wtforms import Form, StringField, PasswordField, validators
 
 class LoginForm(Form):
-    username = StringField('Username', [validators.Length(min=4, max=25)])
+    username = StringField('Username', [
+        validators.Length(min=4, max=25),
+        validators.DataRequired()
+        ])
     password = PasswordField('Password', [
         validators.DataRequired()
-    ])
+        ])
 
 if __name__=='__main__':
     pass
