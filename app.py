@@ -9,9 +9,9 @@ def home():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 	from forms import LoginForm
-	#form = LoginForm(request.form)
+	form = LoginForm(request.form)
 	
-	return render_template('login.html')
+	return render_template('login.html', form=form)
 
 @app.route('/xd')
 def xd():
