@@ -6,6 +6,9 @@ app = Flask(__name__)
 def home():
 	return render_template('index.html')
 
+@app.route('/login')
+def login():
+
 @app.route('/xd')
 def xd():
 	return render_template('xd.html')
