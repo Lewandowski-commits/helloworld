@@ -2,11 +2,20 @@ from pymongo import MongoClient
 from os import getenv
 from urllib.parse import quote
 
-def get_database():
-    CONNECTION_STRING = f'mongodb+srv://login:{quote(getenv("MONGODB_PASSWORD"))}@cluster0.uivfa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-    client = MongoClient(CONNECTION_STRING)
+class Db:
+    PWD = getenv("MONGODB_PASSWORD")
+    CONNECTION_STRING = f'mongodb+srv://login:{quote(PWD)}@cluster0.uivfa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
-    return client
+    def __init__(self, pwd=PWD, cnx=CONNECTION_STRING):
+        self.PWD = pwd
+        self.CONNECTION_STRING = cnx
+        client = MongoClient(self.CONNECTION_STRING)
+        self.client = client
+    
+    def test_connection(self):
+        return self.client.test
+
 
 if __name__ == '__main__':
-    print(get_database().test)
+    database = Db()
+    print(database.test_connection())
