@@ -4,9 +4,10 @@ from urllib.parse import quote
 
 class Db:
 
-    def __init__(self, PWD=getenv("MONGODB_PASSWORD")):
-        CONNECTION_STRING = f'mongodb+srv://login:{quote(PWD)}@cluster0.uivfa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+    def __init__(self, USR="login", PWD=getenv("MONGODB_PASSWORD")):
+        self.USR = USR
         self.PWD = PWD
+        CONNECTION_STRING = f'mongodb+srv://{self.USR}:{quote(self.PWD)}@cluster0.uivfa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
         client = MongoClient(CONNECTION_STRING)
         self.client = client
     
