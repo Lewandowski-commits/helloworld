@@ -17,6 +17,11 @@ class Db:
         self.database = self.client[database]
         self.collection = self.database[collection]
         return self.collection.find()
+    
+    def find_one(self, collection, database='blog'):
+        self.database = self.client[database]
+        self.collection = self.database[collection]
+        return self.collection.find_one()
 
 
 if __name__ == '__main__':
