@@ -29,4 +29,3 @@ class Db:
 if __name__ == '__main__':
     database = Db()
     print(database.test_connection())
-    print([x for x in database.find('users')])
