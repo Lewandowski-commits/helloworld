@@ -13,15 +13,17 @@ class Db:
     def test_connection(self):
         return self.client.test
 
-    def find(self, collection, database='blog'):
+    def find(self, collection, query=None, database='blog'):
         self.database = self.client[database]
         self.collection = self.database[collection]
-        return self.collection.find()
+        self.query = query
+        return self.collection.find(self.query)
     
-    def find_one(self, collection, database='blog'):
+    def find_one(self, collection, query=None, database='blog'):
         self.database = self.client[database]
         self.collection = self.database[collection]
-        return self.collection.find_one()
+        self.query = query
+        return self.collection.find_one(self.query)
 
 
 if __name__ == '__main__':
