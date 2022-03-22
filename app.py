@@ -5,6 +5,11 @@ app = Flask(__name__)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
+class User:
+	def __init__(self, username='', password=''):
+		self.username = username
+		self.password = password
+
 @app.route('/')
 def home():
 	return render_template('index.html')
