@@ -17,13 +17,24 @@ def home():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 	from forms import LoginForm
+	from db import Db
 	form = LoginForm(request.form)
 	if request.method == 'POST' and form.validate():
 		user = User(form.username.data,
 					form.password.data)
 		# ask DB if credentials are ok
+		db = Db()
+		if db.find_one(collection = "users",
+						query = {"username": user.username}):
+			print("User found!")
+		else:
+			print("User foundn't")
 		return redirect(url_for('/'))	
 	return render_template('login.html', form=form)
+
+@login_manager.user_loader
+def load_user(user_id):
+		return User.get(user_id)
 
 @app.route('/xd')
 def xd():
