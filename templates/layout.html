@@ -13,10 +13,16 @@
 {# navbar #}
 
 <nav class="navbar navbar-dark justify-content-end">
-  <a class="btn btn-outline-primary" href="https://github.com/Lewandowski-commits/">
-    <i class="fa-brands fa-github"></i>
-    {{ username }}
-  </a>
+  {% if 'username' in session %}
+    <a class="btn btn-outline-primary" href="#">
+      <i class="fa-solid fa-user-check"></i>
+      {{ session['username'] }}
+    </a>
+    <a class="btn btn-outline-danger" href={{ url_for('logout') }}>
+      <i class="fa-solid fa-right-from-bracket"></i>
+      Logout
+    </a>
+  {% endif %}
   <a class="btn btn-outline-primary" href="https://github.com/Lewandowski-commits/">
     <i class="fa-brands fa-github"></i>
     Git
