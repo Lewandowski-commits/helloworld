@@ -36,6 +36,11 @@ def login():
 		return redirect(url_for('index'))	
 	return render_template('login.html', form=form)
 
+@app.route('/logout')
+def logout():
+	session.pop('username', None)
+	return redirect(url_for('index'))
+
 @login_manager.user_loader
 def load_user(user_id):
 		return User.get(user_id)
