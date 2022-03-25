@@ -13,18 +13,21 @@
 {# navbar #}
 
 <nav class="navbar navbar-dark justify-content-end">
-  <a class="btn btn-outline-primary" href="https://github.com/Lewandowski-commits/">
-    <i class="fa-brands fa-github"></i>
-    Git
-  </a>
-  <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/enrulewandowski/">
-    <i class="fa-brands fa-linkedin"></i>
-    LinkedIn
-  </a>
-  <a class="btn btn-outline-primary" href="mailto:michalewandowski0@gmail.com">
-    <i class="fa-solid fa-paper-plane"></i>
-    E-mail
-  </a>
+  {% if 'username' in session %}
+    <a class="btn btn-outline-primary" href="#">
+      <i class="fa-solid fa-user-check"></i>
+      {{ session['username'] }}
+    </a>
+    <a class="btn btn-outline-danger" href={{ url_for('logout') }}>
+      <i class="fa-solid fa-right-from-bracket"></i>
+      Logout
+    </a>
+  {% else %}
+    <a class="btn btn-outline-primary" href={{ url_for('login') }}>
+      <i class="fa-solid fa-user-lock"></i>
+      Login
+    </a>
+  {% endif %}
 </nav>
 
 {# main page content #}
@@ -33,6 +36,19 @@
 {# footer #}
 <footer class="text-center text-lg-start text-muted navbar">
     <div class="card-body">
+      <a class="btn btn-outline-primary" href="https://github.com/Lewandowski-commits/">
+        <i class="fa-brands fa-github"></i>
+        Git
+      </a>
+      <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/enrulewandowski/">
+        <i class="fa-brands fa-linkedin"></i>
+        LinkedIn
+      </a>
+      <a class="btn btn-outline-primary" href="mailto:michalewandowski0@gmail.com">
+        <i class="fa-solid fa-paper-plane"></i>
+        E-mail
+      </a>
+      <br>
       <span>Bootstrap theme: <a href="https://hackerthemes.com/bootstrap-themes/neon-glow/">Neon Glow</a> licensed under MIT by Alexander Rechsteiner</span>
     </div>
 </footer>

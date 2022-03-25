@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+{% from "_formhelpers.html" import render_field %}
+
+<div class="card">
+    <div class="card-body">
+      <h6 class="card-title">Login</h6>
+      <div class="ht-tm-codeblock ht-tm-btn-replaceable ht-tm-element ht-tm-element-inner">
+        <form method=post>
+            {{ render_field(form.username) }}
+            {{ render_field(form.password) }}
+            <p><input type=submit value=Login class="btn btn-primary">
+          </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}  
