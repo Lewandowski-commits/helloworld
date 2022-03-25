@@ -1,7 +1,9 @@
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, request, url_for, redirect, session
 from flask_login import LoginManager
+from os import getenv
 
 app = Flask(__name__)
+app.secret_key = getenv('FLASK_SECRET')
 login_manager = LoginManager()
 login_manager.init_app(app)
 
@@ -25,8 +27,10 @@ def login():
 		# ask DB if credentials are ok
 		db = Db()
 		if db.find_one(collection = "users",
-						query = {"username": user.username}):
+						query = {"username": user.username,
+								"password": user.password}):
 			print("User found!")
+			session['username'] = user.username
 		else:
 			print("User foundn't")
 		return redirect(url_for('index'))	
