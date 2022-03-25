@@ -11,7 +11,7 @@ class User:
 		self.password = password
 
 @app.route('/')
-def home():
+def index():
 	return render_template('index.html')
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -29,7 +29,7 @@ def login():
 			print("User found!")
 		else:
 			print("User foundn't")
-		return redirect(url_for('/'))	
+		return redirect(url_for('index'))	
 	return render_template('login.html', form=form)
 
 @login_manager.user_loader
