@@ -3,6 +3,8 @@ import logging
 import os
 from flask import Flask, render_template, request, url_for, redirect, session
 from flask_login import LoginManager
+from flask_pymongo import PyMongo
+from urllib.parse import quote
 
 app = Flask(__name__)
 
@@ -14,7 +16,11 @@ logging_format = logging.Formatter(
 handler.setFormatter(logging_format)
 app.logger.addHandler(handler)
 
+# app, login manager and pymongo config
 app.secret_key = os.getenv('FLASK_SECRET')
+app.config['MONGO_URI'] = f'mongodb+srv://{quote(str(os.getenv("MONGODB_USER")))}:{quote(str(os.getenv("MONGODB_PASSWORD")))}@cluster0.uivfa.mongodb.net/blog?retryWrites=true&w=majority'
+mongo = PyMongo(app)
+
 login_manager = LoginManager()
 login_manager.init_app(app)
 
@@ -42,15 +48,12 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 	from forms import LoginForm
-	from db import Db
 	form = LoginForm(request.form)
 	if request.method == 'POST' and form.validate():
 		user = User(form.username.data,
 					form.password.data)
 		# ask DB if credentials are ok
-		db = Db()
-		if db.find_one(collection = "users",
-						query = {"username": user.username,
+		if mongo.db.users.find_one({"username": user.username,
 								"password": user.password}):
 			print("User found!")
 			session['username'] = user.username
