@@ -4,7 +4,6 @@ import time
 import os
 from flask import Flask, render_template, request, url_for, redirect, session
 from flask_login import LoginManager
-from os import getenv
 
 app = Flask(__name__)
 
@@ -16,7 +15,7 @@ logging_format = logging.Formatter(
 handler.setFormatter(logging_format)
 app.logger.addHandler(handler)
 
-app.secret_key = getenv('FLASK_SECRET')
+app.secret_key = os.getenv('FLASK_SECRET')
 login_manager = LoginManager()
 login_manager.init_app(app)
 
