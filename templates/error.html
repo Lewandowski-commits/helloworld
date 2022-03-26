@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %} Error {% endblock %}
+
+{% block content %}
+
+{# name and bio #}
+
+<div class="jumbotron bg-transparent mb-0 radius-0">
+    <div class="card mb-3 text-center border-danger text-white">
+        <div class="card-body">
+            <p>{{ error }}</p>
+        </div>
+      </div>
+    <span class="hal-9000 d-block mx-auto mb-4 mt-3"></span>
+</div>
+
+{% endblock %}  

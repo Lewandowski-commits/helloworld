@@ -33,13 +33,13 @@ class User:
 def page_not_found(error):
     app.logger.error(error)
 
-    return 'This page does not exist', 404
+    return render_template('error.html', error=error)
 
 
 @app.errorhandler(500)
 def special_exception_handler(error):
     app.logger.error(error)
-    return '500 error', 500
+    return render_template('error.html', error=error)
 
 @app.route('/')
 def index():
