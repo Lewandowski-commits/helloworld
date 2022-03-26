@@ -1,6 +1,5 @@
 from logging.handlers import RotatingFileHandler
 import logging
-import time
 import os
 from flask import Flask, render_template, request, url_for, redirect, session
 from flask_login import LoginManager
