@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, url_for, redirect, session
 from flask_login import LoginManager
 from flask_pymongo import PyMongo
 from urllib.parse import quote
+from pymongo.errors import OperationFailure
 
 app = Flask(__name__)
 
@@ -35,6 +36,10 @@ def page_not_found(error):
 
     return render_template('error.html', error=error)
 
+@app.errorhandler(OperationFailure)
+def database_auth_error_handler(error):
+	app.logger.error(error)
+	return render_template('error.html', error=error)
 
 @app.errorhandler(500)
 def special_exception_handler(error):
