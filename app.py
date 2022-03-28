@@ -72,6 +72,11 @@ def logout():
 		flash('Logged out!', 'alert-primary')
 	return redirect(url_for('index'))
 
+@app.route('/blog', methods=['GET'])
+def blog():
+	posts = mongo.db.posts.find()
+	return render_template('blog.html', posts=posts)
+
 @login_manager.user_loader
 def load_user(user_id):
 		return User.get(user_id)

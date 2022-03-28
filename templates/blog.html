@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %} Blog {% endblock %}
+
+{% block content %}
+
+{% if posts %}
+    {% for post in posts %}
+        <div class="jumbotron bg-transparent mb-0 radius-0">
+            <header class="masthead text-center">
+                <h1 class="display-2 mb-0">{{ post['title'] }}</h1>
+                {% for tag in post['tags'] %}
+                    <span class="ht-tm-element badge badge-primary">{{ tag }}</span>
+                {% endfor %}
+                <h2 class="display-6">{{ post['date'] }}</h2>
+            </header>
+            <p class="mt-5 text-grey text-spacey">{{ post['body'] }}</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="jumbotron bg-transparent mb-0 radius-0">
+        <header class="masthead text-center">
+            <h1 class="display-2 mb-0">No posts</h1>
+        </header>
+        <p class="mt-5 text-grey text-spacey">Go bother the author to post something</p>
+    </div>
+{% endif %}
+
+{% endblock %}  
