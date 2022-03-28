@@ -58,11 +58,11 @@ def login():
 		# ask DB if credentials are ok
 		if mongo.db.users.find_one({"username": user.username,
 								"password": user.password}):
-			print("User found!")
 			session['username'] = user.username
+			flash('Logged in!', 'alert-primary')
+			return redirect(url_for('index'))
 		else:
-			print("User foundn't")
-		return redirect(url_for('index'))	
+			flash('Wrong username and/or password!', 'alert-warning')
 	return render_template('login.html', form=form)
 
 @app.route('/logout')
