@@ -67,7 +67,9 @@ def login():
 
 @app.route('/logout')
 def logout():
-	session.pop('username', None)
+	if 'username' in session:
+		session.pop('username', None)
+		flash('Logged out!', 'alert-primary')
 	return redirect(url_for('index'))
 
 @login_manager.user_loader
