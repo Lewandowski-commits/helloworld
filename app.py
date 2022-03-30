@@ -9,6 +9,7 @@ from flask_login import LoginManager
 from flask_pymongo import PyMongo
 from urllib.parse import quote
 from pymongo.errors import OperationFailure
+import datetime
 
 app = Flask(__name__)
 
@@ -32,6 +33,14 @@ class User:
 	def __init__(self, username='', password=''):
 		self.username = username
 		self.password = password
+
+class Post:
+	def __init__(self, title, body, tags, author, date):
+		self.title = title
+		self.body = body
+		self.tags = tags
+		self.author = author
+		self.date = date
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -76,6 +85,32 @@ def logout():
 def blog():
 	posts = mongo.db.posts.find()
 	return render_template('blog.html', posts=posts)
+
+@app.route('/blog/new', methods=['GET', 'POST'])
+def blog_new():
+	if 'username' in session:
+		from forms import NewPostForm
+		form = NewPostForm(request.form)
+		if request.method == 'POST' and form.validate():
+			post = Post(form.title.data,
+						form.body.data,
+						form.tags.data,
+						session['username'],
+						datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+			# insert post
+			inserted_post = mongo.db.posts.insert_one(
+														{"title": post.title,
+														"body": post.body,
+														"tags": post.tags,
+														"date": post.date
+														}
+													)
+			flash(f'Post ID {inserted_post.inserted_id} added sucessfully!', 'alert-success')
+		else:
+			render_template('blog_new.html', form=form)
+	else:
+		flash('You need to log in before creating a new post', 'alert-warning')
+		return redirect(url_for('login'))
 
 @login_manager.user_loader
 def load_user(user_id):

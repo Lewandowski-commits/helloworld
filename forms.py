@@ -9,5 +9,18 @@ class LoginForm(Form):
         validators.DataRequired()
         ])
 
+class NewPostForm(Form):
+    title = StringField('Title', [
+        validators.DataRequired(),
+        validators.Length(min=4, max=30)
+    ])
+    body = StringField('Post', [
+        validators.DataRequired(),
+        validators.Length(min=4)
+    ])
+    tags = StringField('Tags', [
+        validators.Length(max=20)
+    ])
+
 if __name__=='__main__':
     pass
