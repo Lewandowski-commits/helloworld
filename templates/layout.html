@@ -16,20 +16,20 @@
   {% if 'username' in session %}
     
     <a href="#">
-      <button class="border rounded-md p-2 border-violet-800 hover:border-white text-violet-800 hover:text-white hover:bg-violet-800">
+      <button class="border rounded-md p-2 border-violet-800 text-violet-800 hover:text-white hover:bg-violet-800">
         <i class="fa-solid fa-user-check"></i>
         {{ session['username'] }}
       </button>
     </a>
     <a href={{ url_for('logout') }}>
-      <button class="border rounded-md p-2 border-rose-800 hover:border-white text-rose-800 hover:text-white hover:bg-rose-800">
+      <button class="border rounded-md p-2 border-rose-800 text-rose-800 hover:text-white hover:bg-rose-800">
         <i class="fa-solid fa-right-from-bracket"></i>
         Logout
       </button>
     </a>
   {% else %}
     <a href={{ url_for('login') }}>
-      <button class="border rounded-md p-2 border-violet-800 hover:border-white text-violet-800 hover:text-white hover:bg-violet-800">
+      <button class="border rounded-md p-2 border-violet-800 text-violet-800 hover:text-white hover:bg-violet-800">
         <i class="fa-solid fa-user-lock"></i>
         Login
     </button>
