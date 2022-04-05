@@ -2,17 +2,17 @@
 <html>
 <head>
     <title>{% block title %}{% endblock %}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3d50be8898.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<body font-family="Roboto">
+<body font-family="Roboto" class="bg-slate-200 dark:bg-slate-900 text-slate-900 dark:text-white">
 {# navbar #}
 
-<nav class="flex flex-row">
+<nav class="flex items-center justify-between flex-wrap bg-teal-500 dark:bg-violet-900 p-6 m-1 rounded-lg">
   {% if 'username' in session %}
     <a class="btn btn-outline-primary" href="#">
       <i class="fa-solid fa-user-check"></i>
