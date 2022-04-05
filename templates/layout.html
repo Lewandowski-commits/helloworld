@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style/bootstrap4-neon-glow.min.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3d50be8898.js" crossorigin="anonymous"></script>
 
@@ -12,7 +12,7 @@
 <body font-family="Roboto">
 {# navbar #}
 
-<nav class="navbar navbar-dark justify-content-end">
+<nav class="flex flex-row">
   {% if 'username' in session %}
     <a class="btn btn-outline-primary" href="#">
       <i class="fa-solid fa-user-check"></i>
