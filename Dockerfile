@@ -2,8 +2,7 @@
 FROM python:3.10
 
 ENV DASH_DEBUG_MODE False
-RUN mkdir app
-COPY . /app
+COPY ./app /app
 WORKDIR /app
 RUN set -ex && \
     pip install -r requirements.txt
