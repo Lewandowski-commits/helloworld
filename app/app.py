@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 import dash
 from os import getenv
 
-BOOTSTRAP_THEME = 'https://hackerthemes.com/bootstrap-themes/demo/theme-machine/neon-glow/css/bootstrap4-neon-glow.min.css'
+BOOTSTRAP_THEME = '/static/style/bootstrap4-neon-glow.css'
 
 app = Dash(__name__, use_pages=True, external_stylesheets=[BOOTSTRAP_THEME])
 
