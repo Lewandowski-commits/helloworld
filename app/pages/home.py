@@ -8,13 +8,22 @@ layout = html.Div(children=[
     dbc.Row(
         className='vh-100 d-flex justify-content-center align-items-center',
         children=[
-	        html.H1(
-                className='display-1',
-                children=[
-                    'Michał Lewandowsk',
-                    html.Span('i', className='vim-caret')
-                    ]
-                    ),
+            dbc.Col(children=
+                [
+                html.H1(
+                    className='display-1',
+                    children=[
+                        'Michał Lewandowsk',
+                        html.Span('i', className='vim-caret')
+                            ]
+                        ),
+                html.H2(
+                    'BI Developer. Python enthusiast.',
+                    className='text-success'
+                    )
+                ],
+                className='col-xl-8'
+                )
             ]
         )
 ])
