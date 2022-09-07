@@ -3,27 +3,24 @@ import dash_bootstrap_components as dbc
 import dash
 from os import getenv
 
-BOOTSTRAP_THEME = '/static/style/bootstrap4-neon-glow.css'
+BOOTSTRAP_THEME = "/static/style/bootstrap4-neon-glow.css"
 
 app = Dash(__name__, use_pages=True, external_stylesheets=[BOOTSTRAP_THEME])
 
 server = app.server
 
-app.layout = html.Div([
-    dash.page_container,
-    dbc.ListGroup(children=
-        [
-            dbc.ListGroupItem(
-                dcc.Link(
-                    page['name'], href=page['relative_path']
-                )
-            )
-            for page in dash.page_registry.values()
-        ],
-    className='sticky-top'
-    )
-],
+app.layout = html.Div(
+    [
+        dash.page_container,
+        dbc.ListGroup(
+            children=[
+                dbc.ListGroupItem(dcc.Link(page["name"], href=page["relative_path"]))
+                for page in dash.page_registry.values()
+            ],
+            className="sticky-top",
+        ),
+    ],
 )
 
-if __name__ == '__main__':
-	app.run_server(debug=getenv('DASH_DEBUG_MODE', True), host='0.0.0.0', port='8050')
+if __name__ == "__main__":
+    app.run_server(debug=getenv("DASH_DEBUG_MODE", True), host="0.0.0.0", port="8050")
