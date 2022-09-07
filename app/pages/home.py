@@ -8,7 +8,13 @@ layout = html.Div(children=[
     dbc.Row(
         className='vh-100 d-flex justify-content-center align-items-center',
         children=[
-	        html.H1('Michał Lewandowski'),
+	        html.H1(
+                className='display-1',
+                children=[
+                    'Michał Lewandowsk',
+                    html.Span('i', className='vim-caret')
+                    ]
+                    ),
             ]
         )
 ])
