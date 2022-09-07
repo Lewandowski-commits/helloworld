@@ -18,7 +18,7 @@ layout = html.Div(children=[
                             ]
                         ),
                 html.H2(
-                    'BI Developer. Python enthusiast.',
+                    '📈 BI Developer. 🐍 Python enthusiast.',
                     className='text-success'
                     )
                 ],
