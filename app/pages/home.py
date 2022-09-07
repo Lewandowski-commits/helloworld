@@ -20,7 +20,7 @@ layout = html.Div(
                         ),
                         html.H2(
                             "📈 BI Developer. 🐍 Python enthusiast.",
-                            className="text-success",
+                            className="lead text-success",
                         ),
                         html.A('About', href='#about-section', className='ht-tm-element btn btn-shadow btn-primary')
                     ],
