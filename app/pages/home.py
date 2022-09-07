@@ -23,7 +23,7 @@ layout = html.Div(
                             className="text-success",
                         ),
                     ],
-                    className="col-xl-8",
+                    className="col-8",
                 )
             ],
         )
