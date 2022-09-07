@@ -32,7 +32,8 @@ layout = html.Div(
             children=[
                 dbc.Col(
                     [
-                        html.H1('About me', id='about-section', className='display-2')
+                        html.H1('About me', id='about-section', className='display-2'),
+                        html.P('Former English-Russian-Polish Translator & Interpreter turned into experienced Data Analyst with a demonstrated history of working in the pharmaceuticals industry. Skilled in PowerBI, Python, Business Analytics, Customer Service, Performance Dashboards, and Emotional Intelligence. Strong information technology enthusiast with a Postgraduate Degree focused in Big Data - Analytics & Society from Collegium Da Vinci.')
                     ],
                 className='col-10'),
             ],
