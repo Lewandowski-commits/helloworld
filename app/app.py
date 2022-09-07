@@ -11,7 +11,7 @@ server = app.server
 
 app.layout = html.Div([
     dash.page_container,
-    dbc.ListGroup(
+    dbc.ListGroup(children=
         [
             dbc.ListGroupItem(
                 dcc.Link(
@@ -19,7 +19,8 @@ app.layout = html.Div([
                 )
             )
             for page in dash.page_registry.values()
-        ]
+        ],
+    className='sticky-top'
     )
 ],
 )
