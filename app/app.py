@@ -10,6 +10,7 @@ app = Dash(__name__, use_pages=True, external_stylesheets=[BOOTSTRAP_THEME])
 server = app.server
 
 app.layout = html.Div([
+    dash.page_container,
     dbc.ListGroup(
         [
             dbc.ListGroupItem(
@@ -19,8 +20,7 @@ app.layout = html.Div([
             )
             for page in dash.page_registry.values()
         ]
-    ),
-    dash.page_container
+    )
 ],
 )
 
