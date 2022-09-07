@@ -9,29 +9,32 @@ app = Dash(__name__, use_pages=True, external_stylesheets=[BOOTSTRAP_THEME])
 
 server = app.server
 
-navbar = dbc.NavbarSimple(
-            children=[
-                dbc.DropdownMenu(
-                    children=[
-                        dbc.NavItem(dcc.Link(page["name"], href=page["relative_path"]))
-                        for page in dash.page_registry.values() if 'portfolio' in page["relative_path"]
-                    ],
-                    nav=True,
-                    in_navbar=True,
-                    label='Portfolio'
+def navbar():
+    return dbc.NavbarSimple(
+                children=[
+                    dbc.DropdownMenu(
+                        children=[
+                            dbc.NavItem(dcc.Link(page["name"], href=page["relative_path"]))
+                            for page in dash.page_registry.values() if 'portfolio' in page["relative_path"]
+                        ],
+                        nav=True,
+                        in_navbar=True,
+                        label='Portfolio',
+                        menu_variant='dark',
+                        direction='up'
+                    )
+                ],
+                color='primary',
+                brand='Michał Lewandowski',
+                brand_href='/',
+                dark=False,
+                fixed='bottom'
                 )
-            ],
-            color='primary',
-            brand='Michał Lewandowski',
-            brand_href='/',
-            dark=False,
-            sticky='top'
-            )
 
 app.layout = html.Div(
     [
+        navbar(),
         dash.page_container,
-        navbar,
     ],
 )
 
