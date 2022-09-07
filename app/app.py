@@ -10,7 +10,6 @@ app = Dash(__name__, use_pages=True, external_stylesheets=[BOOTSTRAP_THEME])
 server = app.server
 
 app.layout = html.Div([
-	html.H1('Multi-page app with Dash Pages'),
     dbc.ListGroup(
         [
             dbc.ListGroupItem(
