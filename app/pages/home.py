@@ -22,10 +22,21 @@ layout = html.Div(
                             "📈 BI Developer. 🐍 Python enthusiast.",
                             className="text-success",
                         ),
+                        html.A('About', href='#about-section', className='ht-tm-element btn btn-shadow btn-primary')
                     ],
                     className="col-8",
                 )
             ],
+        ),
+        dbc.Row(
+            children=[
+                dbc.Col(
+                    [
+                        html.H1('About me', id='about-section', className='display-1')
+                    ],
+                className='col-10'),
+            ],
+            className='vh-100 justify-content-center'
         )
-    ]
+    ],
 )
