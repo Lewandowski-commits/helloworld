@@ -32,7 +32,7 @@ layout = html.Div(
             children=[
                 dbc.Col(
                     [
-                        html.H1('About me', id='about-section', className='display-1')
+                        html.H1('About me', id='about-section', className='display-2')
                     ],
                 className='col-10'),
             ],
