@@ -2,8 +2,12 @@ import dash
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 from tools.reusable_elements import generate_timeline
+from tools.db_connectivity import job_history_table
 
 dash.register_page(__name__, path="/")
+
+job_history_dict = job_history_table.scan()['Items']
+job_history_dict.reverse()
 
 layout = html.Div(
     children=[
@@ -36,13 +40,8 @@ layout = html.Div(
                         html.H1('About me', id='about-section', className='display-2'),
                         html.P('Former English-Russian-Polish Translator & Interpreter turned into experienced Data Analyst with a demonstrated history of working in the pharmaceuticals industry. Skilled in PowerBI, Python, Business Analytics, Customer Service, Performance Dashboards, and Emotional Intelligence. Strong information technology enthusiast with a Postgraduate Degree focused in Big Data - Analytics & Society from Collegium Da Vinci.'),
                         generate_timeline(
-                            [{
-                                'name': 'First job',
-                                'date': '2042-53-12',
-                                'body': '''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque
-              diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis
-              sagittis ligula in sodales vehicula....'''
-                            }]
+                            job_history_dict,
+                            date = 'start_date'
                         )
                     ],
                 className='col-10'),
