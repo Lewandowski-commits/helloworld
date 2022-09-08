@@ -1,7 +1,7 @@
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 
-def generate_timeline(events: list[dict]):
+def generate_timeline(events: list[dict], heading='job_title', date='date', body='description'):
     children = []
     for event in events:
         children.append(
@@ -9,16 +9,16 @@ def generate_timeline(events: list[dict]):
                 dbc.Card([
                     dbc.CardBody(children=[
                         dbc.CardHeader(
-                            event['name']
+                            event[heading]
                         ),
                         html.Span(children=[
                             html.I(className='fas fa-clock me-1'),
-                            event['date']
+                            event[date]
                         ],
                         className='small text-muted'
                         ),
                         html.P(children=[
-                            event['body']
+                            event[body]
                         ],
                         className='mt-2 mb-0')
                     ],
