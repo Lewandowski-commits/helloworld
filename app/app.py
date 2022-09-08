@@ -4,9 +4,9 @@ import dash
 from os import getenv
 
 BOOTSTRAP_THEME = "/static/style/bootstrap4-neon-glow.css"
+EXTERNAL_SCRIPTS = ['https://kit.fontawesome.com/3d50be8898.js']
 
-app = Dash(__name__, use_pages=True, external_stylesheets=[BOOTSTRAP_THEME])
-
+app = Dash(__name__, use_pages=True, external_stylesheets=[BOOTSTRAP_THEME], external_scripts=EXTERNAL_SCRIPTS)
 server = app.server
 
 def navbar():
