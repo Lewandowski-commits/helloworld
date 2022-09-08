@@ -6,8 +6,8 @@ from tools.db_connectivity import job_history_table
 
 dash.register_page(__name__, path="/")
 
-job_history_dict = job_history_table.scan()['Items']
-job_history_dict.reverse()
+job_history_list = job_history_table.scan()['Items']
+job_history_list.reverse()
 
 layout = html.Div(
     children=[
@@ -40,7 +40,7 @@ layout = html.Div(
                         html.H1('About me', id='about-section', className='display-2'),
                         html.P('Former English-Russian-Polish Translator & Interpreter turned into experienced Data Analyst with a demonstrated history of working in the pharmaceuticals industry. Skilled in PowerBI, Python, Business Analytics, Customer Service, Performance Dashboards, and Emotional Intelligence. Strong information technology enthusiast with a Postgraduate Degree focused in Big Data - Analytics & Society from Collegium Da Vinci.'),
                         generate_timeline(
-                            job_history_dict,
+                            job_history_list,
                             date = 'start_date'
                         )
                     ],
