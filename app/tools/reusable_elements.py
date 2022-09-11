@@ -30,7 +30,8 @@ def generate_timeline(events: list[dict], heading='job_title', date='date', body
                                     ],
                                     title='More'
                                 )
-                            ]
+                            ],
+                            start_collapsed=True
                         )
                     ],
                     className='p-4')
