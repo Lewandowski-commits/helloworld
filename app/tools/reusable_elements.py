@@ -8,8 +8,9 @@ def generate_timeline(events: list[dict], heading='job_title', date='date', body
             html.Div(children=[
                 dbc.Card([
                     dbc.CardBody(children=[
-                        dbc.CardHeader(
-                            event[heading]
+                        html.H5(
+                            event[heading],
+                            className='display-5'
                         ),
                         html.Span(children=[
                             html.I(className='fas fa-clock me-1'),
