@@ -13174,7 +13174,7 @@ body {
   content: "";
   position: absolute;
   width: 3px;
-  background-color: #fff;
+  background-color: var(--primary);
   top: 0;
   bottom: 0;
   left: auto;
@@ -13195,7 +13195,7 @@ body {
   width: 17px;
   height: 17px;
   right: 1px;
-  background-color: #fff;
+  background-color: var(--primary);
   top: 18px;
   border-radius: 50%;
   z-index: 1;
@@ -13214,9 +13214,9 @@ body {
   top: 18px;
   z-index: 1;
   left: 30px;
-  border: medium solid #fff;
+  border: medium solid var(--primary);
   border-width: 10px 10px 10px 0;
-  border-color: transparent #fff transparent transparent;
+  border-color: transparent var(--primary) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
