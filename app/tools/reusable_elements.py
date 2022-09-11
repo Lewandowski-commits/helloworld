@@ -13,6 +13,7 @@ def generate_timeline(events: list[dict], heading='job_title', date='date', body
                         ),
                         html.Span(children=[
                             html.I(className='fas fa-clock me-1'),
+                            ' ',
                             event[date]
                         ],
                         className='small text-muted'
