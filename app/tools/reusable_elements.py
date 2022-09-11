@@ -19,10 +19,19 @@ def generate_timeline(events: list[dict], heading='job_title', date='date', body
                         ],
                         className='small text-muted'
                         ),
-                        html.P(children=[
-                            event[body]
-                        ],
-                        className='mt-2 mb-0')
+                        dbc.Accordion(
+                            [
+                                dbc.AccordionItem(
+                                    [
+                                        html.P(children=[
+                                            event[body]
+                                        ],
+                                        className='mt-2 mb-0')
+                                    ],
+                                    title='More'
+                                )
+                            ]
+                        )
                     ],
                     className='p-4')
                 ])
