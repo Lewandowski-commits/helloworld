@@ -1,6 +1,7 @@
-venv/*
+.venv/*
 __pycache__/*
 .vscode/*
 logs/*
 .env
 .swp
+*.pyc
