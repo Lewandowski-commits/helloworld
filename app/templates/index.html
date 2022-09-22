@@ -22,11 +22,13 @@
         <section class="gradient-custom-5">
             <div class="container py-5">
                 <div class="main-timeline-5">
+                    {% for position in positions %}
                     <div class="timeline-5 right-5">
                         <div class="card">
                             <div class="p-4 card-body">
-                                <h5 class="display-5">BI Developer</h5><span class="small text-muted"><i
-                                        class="fas fa-clock me-1" aria-hidden="true"></i> 2022-08-01</span>
+                                <h5 class="display-5">{{ position['job_title'] }} @ {{ position['company'] }}</h5>
+                                <span class="small text-muted"><i class="fas fa-clock me-1" aria-hidden="true"></i>
+                                    {{ position['start_date'] }}</span>
                                 <div class="accordion">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" style="margin-top: 0rem; margin-bottom: 0rem;">
@@ -35,7 +37,7 @@
                                         </h2>
                                         <div class="accordion-collapse collapse">
                                             <div class="accordion-body">
-                                                <p class="mt-2 mb-0">My current role.</p>
+                                                <p class="mt-2 mb-0">{{ position['description'] }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -43,61 +45,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="timeline-5 right-5">
-                        <div class="card">
-                            <div class="p-4 card-body">
-                                <h5 class="display-5">Data Analyst/PowerBI Developer</h5><span
-                                    class="small text-muted"><i class="fas fa-clock me-1" aria-hidden="true"></i>
-                                    2021-04-01</span>
-                                <div class="accordion">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" style="margin-top: 0rem; margin-bottom: 0rem;">
-                                            <button type="button" aria-expanded="false"
-                                                class="accordion-button collapsed">More</button>
-                                        </h2>
-                                        <div class="accordion-collapse collapse">
-                                            <div class="accordion-body">
-                                                <p class="mt-2 mb-0">I developed holistic PowerBI datasets/data models,
-                                                    reports and apps, featuing: multi-measure visuals (DAX), dynamic
-                                                    measure formatting (calculation groups), hierarchical visuals
-                                                    (adaptable to stakeholder seniority level/granularity of their area
-                                                    of interest), security roles utilising Row and Object Level
-                                                    Security, etc., which allowed the business to identify at least
-                                                    33.93M € annualized margin savings. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="timeline-5 right-5">
-                        <div class="card">
-                            <div class="p-4 card-body">
-                                <h5 class="display-5">Regulatory Data Management Specialist</h5><span
-                                    class="small text-muted"><i class="fas fa-clock me-1" aria-hidden="true"></i>
-                                    2018-08-01</span>
-                                <div class="accordion">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" style="margin-top: 0rem; margin-bottom: 0rem;">
-                                            <button type="button" aria-expanded="false"
-                                                class="accordion-button collapsed">More</button>
-                                        </h2>
-                                        <div class="accordion-collapse collapse">
-                                            <div class="accordion-body">
-                                                <p class="mt-2 mb-0">Managed clinical and commercial Rx regulatory data
-                                                    under tight timelines. Organised and co-led cross-business (Pharma
-                                                    and Vaccines) data quality verification project. Built several
-                                                    automation tools for internal projects using MS Excel. Trained both
-                                                    internal team members, as well as intra-company stakeholders on the
-                                                    use of Veeva Regulatory Information Management Vault.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
