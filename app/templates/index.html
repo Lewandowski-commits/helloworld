@@ -36,8 +36,8 @@
                                     </div>
                                     <div class="accordion-item">
                                         <div id="collapse-{{ position['partition_key'] }}"
-                                            class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                            data-bs-parent="#accordion-timeline">
+                                            class="accordion-collapse collapse {% if position['partition_key'] == 0 %}show{% endif %}"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordion-timeline">
                                             <div class="accordion-body">
                                                 {{ position ['description'] }}
                                             </div>
