@@ -11,7 +11,9 @@ dynamodb = boto3.resource('dynamodb')
 def home():
     """Landing page."""
     positions = dynamodb.Table('job_history').scan()['Items']
-    
+
+    positions = reversed(positions)
+
     return render_template(
         'index.html',
         positions=positions
