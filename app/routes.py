@@ -7,11 +7,11 @@ client = boto3.client('dynamodb')
 
 dynamodb = boto3.resource('dynamodb')
 
-positions = dynamodb.Table('job_history').scan()['Items']
-
 @app.route('/')
 def home():
     """Landing page."""
+    positions = dynamodb.Table('job_history').scan()['Items']
+    
     return render_template(
         'index.html',
         positions=positions
