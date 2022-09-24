@@ -8,9 +8,9 @@
  */
 :root {
   --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
+  --indigo: #b418c2;
+  --purple: #2f0059;
+  --pink: #ef529c;
   --red: #dc3545;
   --orange: #fd7e14;
   --yellow: #ffc107;
@@ -20,7 +20,7 @@
   --white: #fff;
   --gray: #1d1e2f;
   --gray-dark: #11111d;
-  --primary: #714cdf;
+  --primary: #ef529c;
   --secondary: #16a4de;
   --success: #17b06b;
   --info: #2983fe;
@@ -73,7 +73,7 @@ body {
   line-height: 1.5;
   color: #e4e2ff;
   text-align: left;
-  background-color: #0c0d16;
+  background-color: #2f0059;
 }
 
 [tabindex="-1"]:focus {
@@ -3099,14 +3099,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #714cdf;
-  border-color: #714cdf;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #572cd9;
-  border-color: #5126d2;
+  background-color: var(--indigo);
+  border-color: var(--indigo);
 }
 
 .btn-primary:focus,
@@ -12302,7 +12302,7 @@ body {
 
 .btn-shadow.btn-primary,
 .btn-shadow.btn-outline-primary {
-  border-color: #986edf;
+  border-color: #853b84;
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
