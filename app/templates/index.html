@@ -16,7 +16,8 @@
     <div class="col">
         <h1 id="about-section" class="display-2">About me</h1>
         {% for company in companies %}
-        <img src="{{ url_for('static', filename=company+'.png')}}" class="img-fluid" width="300vw">
+        <img src="{{ url_for('static', filename=company+'.png')}}" class="img-fluid" width="300vw"
+            alt="{{company}} logo" title="{{company.upper()}} logo">
         {% endfor %}
         <p>I'm a former English-Russian-Polish Translator &amp; Interpreter turned into experienced Data Analyst with a
             demonstrated history of working in the pharmaceuticals industry. Skilled in PowerBI, Python, and SQL. </p>
