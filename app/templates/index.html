@@ -14,7 +14,7 @@
 
 <div class="vh-100 justify-content-center row">
     <div class="col">
-        <h1 id="about-section" class="display-2">Happy employers</h1>
+        <h1 id="about-section" class="display-2 text-center">Happy employers</h1>
         {% for company in companies %}
         <img src="{{ url_for('static', filename=company+'.png')}}" class="img-fluid" width="300vw"
             alt="{{company}} logo" title="{{company.upper()}} logo">
