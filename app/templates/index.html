@@ -16,7 +16,7 @@
     <div class="col">
         <h1 id="about-section" class="display-2 text-center">Happy employers</h1>
         {% for company in companies %}
-        <img src="{{ url_for('static', filename=company+'.png')}}" class="img-fluid" width="300vw"
+        <img src="{{ url_for('static', filename=company+'.png')}}" class="img-fluid border-gradient-1" width="500vw"
             alt="{{company}} logo" title="{{company.upper()}} logo">
         {% endfor %}
         <p>I'm a former English-Russian-Polish Translator &amp; Interpreter turned into experienced Data Analyst with a

@@ -28,6 +28,7 @@
   --danger: #ff3c5c;
   --light: #dbebfb;
   --dark: #32334a;
+  --bg: #2f0059;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -73,7 +74,7 @@ body {
   line-height: 1.5;
   color: #e4e2ff;
   text-align: left;
-  background-color: #2f0059;
+  background-color: var(--bg);
 }
 
 [tabindex="-1"]:focus {
@@ -13281,4 +13282,12 @@ body {
 .scrolled-up {
   transform: translateY(0);
   transition: all 0.3s ease-in-out;
+}
+
+.border-gradient-1 {
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
+    linear-gradient(to right, var(--cyan), darkorchid) border-box;
+  border-radius: 100em;
+  border: 4px solid transparent;
 }
