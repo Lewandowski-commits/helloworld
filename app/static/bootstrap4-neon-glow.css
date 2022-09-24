@@ -16,7 +16,7 @@
   --yellow: #ffc107;
   --green: #28a745;
   --teal: #20c997;
-  --cyan: #17a2b8;
+  --cyan: #19c2ce;
   --white: #fff;
   --gray: #1d1e2f;
   --gray-dark: #11111d;
@@ -172,13 +172,13 @@ sup {
 }
 
 a {
-  color: #714cdf;
+  color: var(--secondary);
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #4922bd;
+  color: var(--orange);
   text-decoration: underline;
 }
 
