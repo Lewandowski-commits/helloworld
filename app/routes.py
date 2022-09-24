@@ -5,7 +5,7 @@ from flask import current_app as app
 @app.route('/')
 def home():
     """Landing page."""
-    companies = ['gsk', 'haleon', 'lingaro']
+    companies = ['lingaro', 'haleon', 'gsk']
 
     return render_template(
         'index.html',
