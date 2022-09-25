@@ -7,4 +7,4 @@ COPY ./app /app
 RUN set -ex && \
     pip install -r app/requirements.txt
 EXPOSE 8050
-CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=8050"]
+CMD ["python", "-m", "flask", "run"]
