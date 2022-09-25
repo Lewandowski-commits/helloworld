@@ -7,4 +7,4 @@ COPY ./app /app
 RUN set -ex && \
     pip install -r app/requirements.txt
 EXPOSE 5000
-CMD ["python", "-m", "flask", "run"]
+CMD ["python", "wsgi.py"]
