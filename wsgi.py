@@ -7,4 +7,4 @@ app = init_app()
 
 
 if __name__ == "__main__":
-    app.run(debug=getenv("DASH_DEBUG_MODE", False))
+    app.run(host='0.0.0.0', debug=getenv("DASH_DEBUG_MODE", False), port='8050')
