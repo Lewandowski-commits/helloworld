@@ -2,9 +2,9 @@
 FROM python:3.10
 
 ENV DASH_DEBUG_MODE False
+COPY . /
 COPY ./app /app
-WORKDIR /app
 RUN set -ex && \
-    pip install -r requirements.txt
+    pip install -r app/requirements.txt
 EXPOSE 8050
-CMD ["gunicorn", "-b", "0.0.0.0:8050", "--reload", "app:server"]
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=8050"]
