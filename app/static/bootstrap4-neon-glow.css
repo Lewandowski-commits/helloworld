@@ -13292,3 +13292,8 @@ body {
   border-radius: 100em;
   border: 4px solid transparent;
 }
+
+.flex-break {
+  flex-basis: 100%;
+  height: 0;
+}
