@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="vh-100 d-flex align-items-center justify-content-around row">
+    <img src="{{ url_for('static', filename='logo.png')}}" class="" width="200vw">
+    <div>
+        <h1 class="display-1 text-primary">Michał Lewandowsk<span class="vim-caret">i</span></h1>
+        <h2 class="lead text-success">📈 BI Developer. 🐍 Python enthusiast.</h2>
+    </div>
+</div>
+
+<div class="vh-100 d-flex justify-content-center align-items-center row">
+    <h1 id="about-section" class="display-2">Happy employers</h1>
+    <div class="flex-break"></div>
+    <h2 class="display-3">Present</h2>
+    {% for company in companies[0:1] %}
+    <img src="{{ url_for('static', filename=company+'.png')}}" class="img-fluid" width="500vw" alt="{{company}} logo"
+        title="{{company.upper()}} logo">
+    {% endfor %}
+    <div class="flex-break"></div>
+    <h2 class="display-3">Past</h2>
+    {% for company in companies[1:] %}
+    <img src="{{ url_for('static', filename=company+'.png')}}" class="img-fluid" width="500vw" alt="{{company}} logo"
+        title="{{company.upper()}} logo">
+    {% endfor %}
+</div>
+</div>
+{% endblock %}
