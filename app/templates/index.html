@@ -10,20 +10,21 @@
     </div>
 </div>
 
-<div class="vh-100 justify-content-center row">
-    <div class="col">
-        <h1 id="about-section" class="display-2 text-center">Happy employers</h1>
-        <h2 class="display-3">Present</h2>
-        {% for company in companies[0:1] %}
-        <img src="{{ url_for('static', filename=company+'.png')}}" class="img-fluid" width="500vw"
-            alt="{{company}} logo" title="{{company.upper()}} logo">
-        {% endfor %}
-        <h2 class="display-3">Past</h2>
-        {% for company in companies[1:] %}
-        <img src="{{ url_for('static', filename=company+'.png')}}" class="img-fluid" width="500vw"
-            alt="{{company}} logo" title="{{company.upper()}} logo">
-        {% endfor %}
-    </div>
+<div class="vh-100 d-flex justify-content-center align-items-center row">
+    <h1 id="about-section" class="display-2">Happy employers</h1>
+    <div class="flex-break"></div>
+    <h2 class="display-3">Present</h2>
+    {% for company in companies[0:1] %}
+    <img src="{{ url_for('static', filename=company+'.png')}}" class="img-fluid" width="500vw" alt="{{company}} logo"
+        title="{{company.upper()}} logo">
+    {% endfor %}
+    <div class="flex-break"></div>
+    <h2 class="display-3">Past</h2>
+    {% for company in companies[1:] %}
+    <img src="{{ url_for('static', filename=company+'.png')}}" class="img-fluid" width="500vw" alt="{{company}} logo"
+        title="{{company.upper()}} logo">
+    {% endfor %}
+</div>
 </div>
 
 <a href="/dashapp/" class="dash-link">
