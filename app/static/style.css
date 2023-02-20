@@ -20,7 +20,9 @@ body {
 
 .main {
     margin-top: 50px;
-    height: 100%
+    height: 100%;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 .grid-container {
@@ -123,6 +125,27 @@ body {
 }
 
 @media (max-width: 700px) {
+    .grid-container {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+    }
+
+    .item-left-big {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .item-right-small {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
     .menu-button-container {
         display: flex;
     }
