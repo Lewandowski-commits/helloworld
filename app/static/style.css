@@ -18,6 +18,10 @@ body {
     background-attachment: fixed;
 }
 
+.main {
+    margin-top: 50px;
+}
+
 .container {
     display: flex;
     flex-direction: row;
