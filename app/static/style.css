@@ -43,6 +43,7 @@ p {
     flex-direction: column;
     background: rgba(0, 0, 0, 0.7);
     padding: 60px;
+    row-gap: 20px;
 }
 
 .grid-container {
