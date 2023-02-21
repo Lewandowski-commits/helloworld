@@ -16,7 +16,7 @@ html {
 body {
     height: 100%;
     background-repeat: no-repeat;
-    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(208, 28, 244, 1) 0%, rgba(104, 16, 129, 1) 100%);
+    background: linear-gradient(0deg, rgba(208, 28, 244, 1) 0%, rgba(104, 16, 129, 1) 100%);
     background-attachment: fixed;
 }
 
@@ -64,6 +64,23 @@ p {
 .item-right-small {
     grid-column-start: 7;
     grid-column-end: 12;
+}
+
+a.button {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: linear-gradient(0deg, rgba(255, 181, 0, 1) 0%, rgba(255, 109, 175, 1) 100%);
+    transition: all 0.2s;
+}
+
+a.button:hover {
+    background-color: #4095c6;
 }
 
 .top-nav {
