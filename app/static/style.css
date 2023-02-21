@@ -5,6 +5,8 @@
     padding: 0;
 
     box-sizing: border-box;
+
+    font-family: 'Avenir LT Pro', sans-serif;
 }
 
 html {
@@ -16,6 +18,19 @@ body {
     background-repeat: no-repeat;
     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(208, 28, 244, 1) 0%, rgba(104, 16, 129, 1) 100%);
     background-attachment: fixed;
+}
+
+h1 {
+    color: #8F00B5;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #FFFFFF
+}
+
+p {
+    color: #a5a5a5
 }
 
 .main {
