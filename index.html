@@ -17,23 +17,35 @@
 <body>
     <section class="top-nav">
         <div>
-            <img src="app/static/logo.png" width="42" , height="42" />
+            <img src="app/static/logo.png" width="42" , height="42" class="logo" />
         </div>
         <input id="menu-toggle" type="checkbox" />
         <label class='menu-button-container' for="menu-toggle">
             <div class='menu-button'></div>
         </label>
         <ul class="menu">
-            <li><a href="/" class="nav-link">Home</a></li>
-            <li><a href="https://github.com/Lewandowski-commits" class="nav-link">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/lewandowskimicha%C5%82/" class="nav-link">LinkedIn</a></li>
-            <li><a href="#" class="nav-link">Contact</a></li>
+            <li><a href="#top" class="nav-link">
+                    Home
+                    <hr>
+                </a></li>
+            <li><a href="https://github.com/Lewandowski-commits" class="nav-link">
+                    GitHub
+                    <hr>
+                </a></li>
+            <li><a href="https://www.linkedin.com/in/lewandowskimicha%C5%82/" class="nav-link">
+                    LinkedIn
+                    <hr>
+                </a></li>
+            <li><a href="#contact" class="nav-link">
+                    Contact
+                    <hr>
+                </a></li>
         </ul>
     </section>
 
     <section class="main">
         <div class="grid-container">
-            <div class="item-left-big">
+            <div class="item-left-big" id="top">
                 <img src="app/static/profile pic no bg.png" width=100% alt="Profile picture of author" />
             </div>
             <div class="item-right-small bg-black">
@@ -41,14 +53,14 @@
                 <h2>BI Developer</h2>
                 <p>Through a background in translation I bring a unique set of soft and hard skills that allows me to
                     effectively perform technical tasks and communicate complex terms to a wide range of audiences.</p>
-                <a href="#" class="button">Get in touch</a>
-                <a href="#" class="button">See skills</a>
+                <a href="#contact" class="button">Get in touch</a>
+                <a href="#skills" class="button">See skills</a>
             </div>
             <div class="item-left-big">
 
             </div>
             <div class="item-right-small bg-black">
-                <h1>Skills</h1>
+                <h1 id="skills">Skills</h1>
                 <h2>PowerBI</h2>
                 <p>Lorem ipsum</p>
                 <hr>
@@ -66,8 +78,9 @@
 
             </div>
             <div class="item-right-small bg-black">
-                <h1>Contact</h1>
+                <h1 id="contact">Contact</h1>
                 <h2>Get in touch with me</h2>
+                <a href="https://www.linkedin.com/in/lewandowskimicha%C5%82/" class="button">Via LinkedIn</a>
             </div>
     </section>
 </body>
