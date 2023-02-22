@@ -75,7 +75,7 @@ a.nav-link {
 
 a.button {
     display: inline-block;
-    padding: 0.3em 1.2em;
+    padding: 1em 1.2em;
     margin: 0 0.3em 0.3em 0;
     border-radius: 2em;
     box-sizing: border-box;
@@ -84,6 +84,7 @@ a.button {
     color: #FFFFFF;
     background-color: rgba(255, 181, 0, 1);
     transition: all 0.2s;
+    width: 10em
 }
 
 a.button:hover {
