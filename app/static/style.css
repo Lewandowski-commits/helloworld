@@ -67,6 +67,12 @@ p {
     grid-column-end: 12;
 }
 
+a.nav-link {
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 a.button {
     display: inline-block;
     padding: 0.3em 1.2em;
