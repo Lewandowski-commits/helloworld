@@ -33,6 +33,14 @@ p {
     color: #a5a5a5
 }
 
+img {
+    filter: grayscale(100%)
+}
+
+img.logo {
+    filter: none
+}
+
 .main {
     margin-top: 50px;
     height: 100%;
