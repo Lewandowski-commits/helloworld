@@ -186,15 +186,11 @@ hr {
     .item-left-big {
         grid-column-start: 1;
         grid-column-end: 12;
-        grid-row-start: 1;
-        grid-row-end: 1;
     }
 
     .item-right-small {
         grid-column-start: 1;
         grid-column-end: 12;
-        grid-row-start: 2;
-        grid-row-end: 2;
     }
 
     .menu-button-container {
