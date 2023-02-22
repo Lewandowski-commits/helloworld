@@ -91,7 +91,7 @@ a.button:hover {
 }
 
 hr {
-    border-top: 3px solid rgba(208, 28, 244, 1);
+    border-top: 5px solid rgba(208, 28, 244, 1);
     border-bottom: 0px;
     border-left: 0px;
     border-right: 0px;
