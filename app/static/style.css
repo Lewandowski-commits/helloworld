@@ -180,7 +180,7 @@ hr {
     transform: rotate(-405deg);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .grid-container {
         grid-template-rows: 1fr 1fr;
         width: 100%;
