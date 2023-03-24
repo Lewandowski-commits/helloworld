@@ -198,6 +198,10 @@ hr {
         grid-column-end: 12;
     }
 
+    .img-padding {
+        padding: 10px;
+    }
+
     .menu-button-container {
         display: flex;
     }
