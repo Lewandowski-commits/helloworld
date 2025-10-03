@@ -7,6 +7,48 @@
     <title>Michał Lewandowski - 🧱 Databricks Certified Data Engineer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/quartz/bootstrap.min.css">
+    <style>
+        @media print {
+            @page {
+                size: A4;
+                margin: 1.5cm;
+            }
+
+            body,
+            .card {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            body {
+                font-size: 11pt;
+            }
+
+            header .d-flex a {
+                display: none;
+            }
+
+            .col-lg-8,
+            .col-lg-4 {
+                width: 100% !important;
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+
+            .card,
+            section {
+                page-break-inside: avoid;
+            }
+
+            #education {
+                page-break-before: auto;
+            }
+
+            img {
+                max-width: 100% !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -14,9 +56,6 @@
         <div class="row">
             <div class="col-lg-8">
                 <header class="mb-5">
-                    <div class="d-lg-none text-center mb-4">
-                        <img src="static/profile_photo.jpg" class="img-fluid" alt="Profile Photo">
-                    </div>
                     <div class="d-flex align-items-center">
                         <h1 class="flex-grow-1">MICHAŁ LEWANDOWSKI</h1>
                     </div>
@@ -58,23 +97,6 @@
                             </svg></a>
                     </div>
                 </header>
-
-                <section id="skills">
-                    <h2 class="mb-4">Skills</h2>
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Programming</h5>
-                            <p>Python, PySpark, Pandas, Plotly, Flask, Django, Selenium, BeautifulSoup, SQL, DAX,
-                                Docker, Git
-                            </p>
-                            <h5 class="card-title">Cloud</h5>
-                            <p><strong>Azure:</strong> Databricks, DevOps, Data Factory,
-                                Functions<br><strong>AWS:</strong> EC2, ElasticBeanstalk, CodeDeploy</p>
-                            <h5 class="card-title">Software</h5>
-                            <p>PowerBI, PowerAutomate, PowerApps, VSCode / Azure Data Studio, Figma</p>
-                        </div>
-                    </div>
-                </section>
 
                 <section id="experience">
                     <h2 class="mb-4">Relevant Experience</h2>
@@ -134,46 +156,23 @@
                         </div>
                     </div>
                 </section>
-
-                <section id="other-experience">
-                    <h2 class="mb-4">Other Experience</h2>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">August 2018 - March 2021 | GSK | Regulatory Data Management</li>
-                        <li class="list-group-item">September 2015 - February 2021 | Freelance | English-Russian-Polish
-                            Translator</li>
-                        <li class="list-group-item">February 2018 - August 2018 | Newell Brands | Customer Service</li>
-                        <li class="list-group-item">August 2017 - December 2017 | GSK | Business Process Analyst</li>
-                        <li class="list-group-item">July 2017 - August 2017 | GSK | Front Desk Receptionist</li>
-                    </ul>
-                </section>
-
-                <section id="education" class="mt-5">
-                    <h2 class="mb-4">Education</h2>
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Postgraduate Degree in Big Data</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Collegium Da Vinci, Poland | October 2020 –
-                                October 2021</h6>
-                            <p class="card-text">GPA: 5.0 (top grade)<br>Thesis: "Prediction of the bike sharing demand
-                                in Poznań. Evaluation of pre- and mid pandemic data"</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Bachelor's and Master's Degree in Russian Language and Literature
-                            </h5>
-                            <h6 class="card-subtitle mb-2 text-muted">University of Adam Mickiewicz in Poznań, Poland |
-                                October 2013 – January 2018</h6>
-                            <p class="card-text">GPA: 5.0 (top grade; both degrees)</p>
-                        </div>
-                    </div>
-                </section>
             </div>
 
             <div class="col-lg-4">
                 <aside>
-                    <div class="d-none d-lg-block text-center mb-4">
-                        <img src="static/profile_photo.jpg" class="img-fluid" alt="Profile Photo">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Skills</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Programming</h6>
+                            <p>Python, PySpark, Pandas, Plotly, Flask, Django, Selenium, BeautifulSoup, SQL, DAX,
+                                Docker, Git
+                            </p>
+                            <h6 class="card-subtitle mb-2 text-muted">Cloud</h6>
+                            <p><strong>Azure:</strong> Databricks, DevOps, Data Factory,
+                                Functions<br><strong>AWS:</strong> EC2, ElasticBeanstalk, CodeDeploy</p>
+                            <h6 class="card-subtitle mb-2 text-muted">Software</h6>
+                            <p>PowerBI, PowerAutomate, PowerApps, VSCode / Azure Data Studio, Figma</p>
+                        </div>
                     </div>
                     <div class="card mb-4">
                         <div class="card-body">
@@ -199,6 +198,26 @@
                                 <li>Russian - C1</li>
                                 <li>German - A1/A2</li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Education</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Postgraduate Degree in Big Data</h6>
+                            <p class="card-text">Collegium Da Vinci, Poland | October 2020 –
+                                October 2021</p>
+                            <p class="card-text">GPA: 5.0 (top grade)<br>Thesis: "Prediction of the bike sharing
+                                demand
+                                in Poznań. Evaluation of pre- and mid pandemic data"</p>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Bachelor's and Master's Degree in Russian
+                                Language and Literature
+                            </h6>
+                            <p class="card-text">University of Adam Mickiewicz in Poznań,
+                                Poland |
+                                October 2013 – January 2018</p>
+                            <p class="card-text">GPA: 5.0 (top grade; both degrees)</p>
                         </div>
                     </div>
 
