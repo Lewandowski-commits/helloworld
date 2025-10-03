@@ -1,108 +1,193 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Michał Lewandowski</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="app/static/favicon.ico">
-    <link rel="stylesheet" href="app/static/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michał Lewandowski - Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/quartz/bootstrap.min.css">
+</head>
 
 <body>
-    <section class="top-nav">
-        <div>
-            <img src="app/static/logo.png" width="42" , height="42" class="logo" />
-        </div>
-        <input id="menu-toggle" type="checkbox" />
-        <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-        </label>
-        <ul class="menu">
-            <li><a href="#top" class="nav-link">
-                    Home
-                    <hr>
-                </a></li>
-            <li><a href="https://github.com/Lewandowski-commits" class="nav-link">
-                    GitHub
-                    <hr>
-                </a></li>
-            <li><a href="https://www.linkedin.com/in/lewandowskimicha%C5%82/" class="nav-link">
-                    LinkedIn
-                    <hr>
-                </a></li>
-            <li><a href="#contact" class="nav-link">
-                    Contact
-                    <hr>
-                </a></li>
-        </ul>
-    </section>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <header class="mb-5">
+                    <div class="d-lg-none text-center mb-4">
+                        <img src="static/profile_photo.jpg" class="img-fluid" alt="Profile Photo">
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <h1 class="flex-grow-1">MICHAŁ LEWANDOWSKI</h1>
+                    </div>
+                    <p class="lead">A highly analytical and detail-oriented Analytics/BI Engineer with a unique
+                        background in translation, bridging the gap between technical and non-technical stakeholders.
+                        Proven ability to translate complex business requirements into robust data engineering and
+                        visualization solutions. Adept at quickly mastering new technologies and effectively
+                        communicating complex information to diverse audiences.</p>
+                </header>
 
-    <section class="main">
-        <div class="grid-container">
-            <div class="item-left-big" id="top">
-                <img src="app/static/profile pic no bg.png" width=100% alt="Profile picture of author" />
-            </div>
-            <div class="item-right-small bg-black">
-                <h1>Michał Lewandowski</h1>
-                <h2>BI Developer</h2>
-                <p>Through a background in translation I bring a unique set of soft and hard skills that allows me to
-                    effectively perform technical tasks and communicate complex terms to a wide range of audiences.</p>
-                <a href="#contact" class="button">Get in touch</a>
-                <a href="#skills" class="button">See skills</a>
-            </div>
-            <div class="item-left-big">
-                <img src="app/static/PowerBI.png" width=200px alt="PowerBI icon" class="img-padding" />
-            </div>
-            <div class="item-right-small bg-black">
-                <h1 id="skills">Skills</h1>
-                <h2>PowerBI</h2>
-                <p>I know how to estimate and develop PowerBI reports ranging from simple to complex, utilising
-                    DAX, M, SQL languages, and advanced features such as RLS/OLS
-                    (row/object-level security), calculation groups, field parameters.</p>
-                <hr>
-            </div>
-            <div class="item-left-big">
-                <img src="app/static/Python.png" width=200px alt="Python icon" class="img-padding" />
-            </div>
-            <div class="item-right-small bg-black">
-                <h2>Python</h2>
-                <p>I have experience building hobby projects that focused on creating OOP Python code, such as web
-                    scrapers (using Selenium and BeautifulSoup), simple websites (Flask), or transforming/modelling data
-                    (Pandas).</p>
-                <hr>
-            </div>
-            <div class="item-left-big">
-                <img src="app/static/Databricks.png" width=200px alt="Databricks icon" class="img-padding" />
-            </div>
-            <div class="item-right-small bg-black">
-                <h2>Databricks</h2>
-                <p>I have successfully completed a couple of projects where I was required to modify existing ETL
-                    pipelines through PySpark on Databricks, and then orchestrate it with Azure Data Factory.</p>
-                <hr>
-            </div>
-            <div class="item-left-big"><img src="app/static/SQL.png" width=200px alt="SQL icon" class="img-padding" />
-            </div>
-            <div class="item-right-small bg-black">
-                <h2>SQL</h2>
-                <p>I write complex DQL (Data Query Language) queries to feed data into my dashboards - including CTEs
-                    (Common Table Expressions), window functions, and regular expressions. I also have experience with
-                    DML (Data Manipulation Language), and DDL (Data Definition Language) - inserting and modifying data,
-                    and defining views and tables.</p>
-            </div>
-            <div class="item-right-small bg-black">
-                <h1 id="contact">Contact</h1>
-                <h2>Get in touch with me</h2>
-                <a href="https://www.linkedin.com/in/lewandowskimicha%C5%82/" class="button">Via LinkedIn</a>
-            </div>
-        </div>
+                <section id="skills">
+                    <h2 class="mb-4">Skills</h2>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Programming</h5>
+                            <p>Python, PySpark, Pandas, Plotly, Flask, Django, Selenium, BeautifulSoup, SQL, DAX,
+                                Docker, Git
+                            </p>
+                            <h5 class="card-title">Cloud</h5>
+                            <p><strong>Azure:</strong> Databricks, DevOps, Data Factory,
+                                Functions<br><strong>AWS:</strong> EC2, ElasticBeanstalk, CodeDeploy</p>
+                            <h5 class="card-title">Software</h5>
+                            <p>PowerBI, PowerAutomate, PowerApps, VSCode / Azure Data Studio, Figma</p>
+                        </div>
+                    </div>
+                </section>
 
-    </section>
+                <section id="experience">
+                    <h2 class="mb-4">Relevant Experience</h2>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">(Lead) BI Engineer/Analytics Engineer/BI Fullstack Developer</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Lingaro, Poland</h6>
+                            <p class="card-text"><em>January 2024 - Present (Lead Consultant)</em></p>
+                            <p class="card-text"><em>November 2022 - January 2024 (Consultant)</em></p>
+                            <p>As a Data Engineer, I have successfully delivered end-to-end data solutions:</p>
+                            <ul>
+                                <li>Translated business requirements into actionable project estimates and technical
+                                    specifications.</li>
+                                <li>Engineered and deployed scalable ETL pipelines using Azure Data Factory and Azure
+                                    Databricks, resulting in improved data processing efficiency.</li>
+                                <li>Optimized and refactored existing ETL/DevOps pipelines and codebases, enhancing
+                                    simplicity and performance.</li>
+                                <li>Developed and deployed serverless REST APIs via Azure Functions to support web
+                                    application back-ends.</li>
+                                <li>Managed data I/O operations on Azure Blob Storage across various data formats.</li>
+                                <li>Established and maintained robust CI/CD pipelines in Azure DevOps for automated
+                                    build and deployment processes.</li>
+                                <li>Designed and documented cloud architecture diagrams to guide project implementation.
+                                </li>
+                                <li>Led the planning and oversight of Azure resource provisioning and configuration with
+                                    offshore teams.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">PowerBI Developer</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Lingaro, Poland</h6>
+                            <p class="card-text"><em>August 2022 – November 2022</em></p>
+                            <h6 class="card-subtitle mb-2 text-muted">GSK/Haleon, Poland</h6>
+                            <p class="card-text"><em>April 2021 - July 2022</em></p>
+                            <p>As a PowerBI Developer, I have delivered impactful data visualizations and analytics
+                                solutions:</p>
+                            <ul>
+                                <li>Analyzed business requirements to provide accurate project estimations for
+                                    PowerBI
+                                    components.</li>
+                                <li>Developed a wide range of PowerBI reports, from simple to complex, leveraging
+                                    advanced DAX, M, and SQL, including features like RLS/OLS, calculation groups,
+                                    and
+                                    field parameters.</li>
+                                <li>Pioneered the integration of version control into new and existing PowerBI
+                                    projects,
+                                    improving collaboration and code management.</li>
+                                <li>Designed visually compelling and on-brand report templates in Figma based on
+                                    client
+                                    specifications.</li>
+                                <li>Delivered expert-level training on advanced PowerBI features to both internal
+                                    teams
+                                    and external conference audiences.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="other-experience">
+                    <h2 class="mb-4">Other Experience</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">August 2018 - March 2021 | GSK | Regulatory Data Management</li>
+                        <li class="list-group-item">September 2015 - February 2021 | Freelance | English-Russian-Polish
+                            Translator</li>
+                        <li class="list-group-item">February 2018 - August 2018 | Newell Brands | Customer Service</li>
+                        <li class="list-group-item">August 2017 - December 2017 | GSK | Business Process Analyst</li>
+                        <li class="list-group-item">July 2017 - August 2017 | GSK | Front Desk Receptionist</li>
+                    </ul>
+                </section>
+
+                <section id="education" class="mt-5">
+                    <h2 class="mb-4">Education</h2>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Postgraduate Degree in Big Data</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Collegium Da Vinci, Poland | October 2020 –
+                                October 2021</h6>
+                            <p class="card-text">GPA: 5.0 (top grade)<br>Thesis: "Prediction of the bike sharing demand
+                                in Poznań. Evaluation of pre- and mid pandemic data"</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bachelor's and Master's Degree in Russian Language and Literature
+                            </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">University of Adam Mickiewicz in Poznań, Poland |
+                                October 2013 – January 2018</h6>
+                            <p class="card-text">GPA: 5.0 (top grade; both degrees)</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-lg-4">
+                <aside>
+                    <div class="d-none d-lg-block text-center mb-4">
+                        <img src="static/profile_photo.jpg" class="img-fluid" alt="Profile Photo">
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Certifications</h5>
+                            <h6>Obtained</h6>
+                            <a
+                                href="https://credentials.databricks.com/959c54af-4aea-4203-8114-5d65f508099f#acc.tPFYsujV"><img
+                                    src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/154884110"
+                                    class="img-fluid mx-auto d-block"
+                                    alt="Databricks Certified Data Engineer Professional"></a>
+                        </div>
+                        <div class="card-body">
+                            <h6>In Progress</h6>
+                            <p>DP-700 - Microsoft Fabric Data Engineer</p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Languages</h5>
+                            <ul class="list-unstyled">
+                                <li>Polish - Native</li>
+                                <li>English - C1/C2</li>
+                                <li>Russian - C1</li>
+                                <li>German - A1/A2</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Contact</h5>
+                            <ul class="list-unstyled">
+                                <li>Poznań, Poland</li>
+                                <li>+48 502 502 822</li>
+                                <li>michalewandowski0@gmail.com</li>
+                                <li>linkedin.com/in/lewandowskimichał</li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+        </aside>
+    </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
